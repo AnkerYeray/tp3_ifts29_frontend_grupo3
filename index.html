@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulless Catcher · Dos flujos agénticos para la verificación de contenido digital | TP3 · IFTS 29</title>
+  <meta name="description" content="Propuesta de dos flujos agénticos para Soulless Catcher (verificación de contenido digital): resultado no concluyente con lista de faltantes y pedido de revisión derivado a una persona. TP3 Dos sentencias, dos soluciones · Front End IFTS 29.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1424'/%3E%3Cpath d='M32 12 L50 20 v14 c0 12-8 20-18 24 -10-4-18-12-18-24 V20 Z' fill='none' stroke='%234cc9f0' stroke-width='4'/%3E%3Cpath d='M24 32 l6 6 12-12' fill='none' stroke='%237bd88f' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <img src="assets/logo-soulless-catcher.webp" alt="Logo de Soulless Catcher" width="36" height="36">
+        <span>Soulless&nbsp;Catcher</span>
+      </a>
+      <nav class="main-nav" aria-label="Secciones de la página">
+        <a href="#presentacion">Presentación</a>
+        <a href="#propuestas">Propuestas</a>
+        <a href="#diagramas">Diagramas</a>
+        <a href="#detalles">Detalles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ═══════════ PRESENTACIÓN ═══════════ -->
+    <section id="presentacion" class="hero">
+      <div class="container">
+        <p class="kicker">TP3 · Dos sentencias, dos soluciones · Front End · IFTS 29 · 2026</p>
+        <div class="hero-grid">
+          <div class="hero-logo">
+            <img src="assets/logo-soulless-catcher.webp" alt="Logo completo de Soulless Catcher: escudo con marca de verificación" width="220" height="220">
+          </div>
+          <div class="hero-text">
+            <h1>Soulless&nbsp;Catcher</h1>
+            <p class="hero-service">Verificación de contenido digital</p>
+            <p class="hero-lead">Asistente para revisar imágenes y videos sospechosos de haber sido generados con IA.</p>
+            <ul class="badges" aria-label="Datos de la asignación">
+              <li class="badge badge-accent">Bloque: Informe y revisión</li>
+              <li class="badge">Asignación docente: S04-C</li>
+              <li class="badge">Sentencias: R5 · R6</li>
+              <li class="badge badge-fill">Equipo: <span class="fill">Grupo __ · integrantes a completar</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <h2 class="section-title"><span class="num">01</span> La startup y su necesidad</h2>
+        <div class="two-col">
+          <article class="panel">
+            <h3>¿Qué es Soulless Catcher?</h3>
+            <p>Soulless Catcher es un servicio de <strong>verificación de contenido digital</strong>: un asistente para revisar
+              imágenes y videos sospechosos de haber sido generados con IA. Cualquiera puede subir un archivo dudoso y
+              pedir una segunda opinión sobre su autenticidad.</p>
+            <p><strong>El problema que ataca:</strong> los archivos sintéticos se propagan rápido y una revisión a medias no
+              alcanza para pronunciarse. Cuando el análisis no reúne evidencia suficiente, la persona necesita saber
+              <em>qué falta</em> para poder aportarlo; y cuando no está de acuerdo con el informe, necesita que su
+              reclamo con nueva evidencia llegue a una persona, no a un buzón.</p>
+            <p class="origin"><strong>Origen:</strong> Soulless Catcher es una startup creada por estudiantes del
+              <strong>IFTS 16</strong>, que expresaron sus condiciones de funcionamiento mediante lógica proposicional.
+              Este trabajo retoma esa producción desde la materia Front End del <strong>IFTS 29</strong> y propuesta dos
+              soluciones para el bloque asignado.</p>
+          </article>
+          <article class="panel">
+            <h3>Nuestro equipo y el bloque asignado</h3>
+            <dl class="meta-list">
+              <dt>Equipo</dt>
+              <dd><span class="fill">Grupo __ · integrantes y aportes a completar (ver README)</span></dd>
+              <dt>Materia</dt>
+              <dd>Desarrollo de Sistemas Web · Front End · IFTS 29 · 2° cuatrimestre 2026</dd>
+              <dt>Bloque</dt>
+              <dd>Informe y revisión</dd>
+              <dt>Asignación</dt>
+              <dd>S04-C (sorteo docente) · sentencias R5 y R6</dd>
+              <dt>Producto</dt>
+              <dd>Esta landing con dos propuestas y dos flujos gráficos</dd>
+            </dl>
+            <p class="note">La propuesta se <strong>diseña y explica</strong>: los flujos representan cómo funcionaría el
+              futuro agente, pero la página no ejecuta ese proceso ni se conecta a servicios reales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ LAS DOS PROPUESTAS ═══════════ -->
+    <section id="propuestas" class="block">
+      <div class="container">
+        <h2 class="section-title"><span class="num">02</span> Dos propuestas, una por sentencia</h2>
+
+        <div class="two-col">
+          <article class="panel propuesta">
+            <span class="chip chip-r5">FRASE 1 · R5</span>
+            <blockquote class="sentencia">Si la revisión no reúne evidencia suficiente, el sistema muestra un resultado
+              no concluyente y explica qué información falta.</blockquote>
+            <h3>Propuesta 1 · «No concluyente, pero útil»</h3>
+            <p>Cuando el análisis no alcanza para pronunciarse, el usuario no recibe un “no sabemos” vacío: recibe un
+              <strong>resultado no concluyente con la lista concreta de qué información falta</strong>. Así puede aportar
+              el material y volver a empezar, en vez de adivinar qué hacer. El agente haría el trabajo pesado con
+              herramientas de análisis y encadenaría con la Propuesta 2 si el usuario cuestiona el resultado.</p>
+            <ul class="tag-row" aria-label="Elementos del flujo">
+              <li class="tag tag-agent">Agente: analiza y expone los faltantes</li>
+              <li class="tag tag-tool">Herramientas: metadatos · patrones · fuentes</li>
+              <li class="tag tag-human">Persona: sólo si el usuario cuestiona (Flujo 2)</li>
+            </ul>
+            <a class="btn-ghost" href="#flujo-1">Ver el diagrama ↓</a>
+          </article>
+
+          <article class="panel propuesta">
+            <span class="chip chip-r6">FRASE 2 · R6</span>
+            <blockquote class="sentencia">Si el usuario cuestiona el informe y aporta nueva evidencia, el sistema
+              registra el pedido de revisión y lo deriva a una persona junto con el material original.</blockquote>
+            <h3>Propuesta 2 · «Revisión registrada y derivada a una persona»</h3>
+            <p>Cada cuestionamiento que llega con nueva evidencia queda <strong>registrado como un pedido de revisión</strong>,
+              con identificador y estado, y se deriva a <strong>una persona junto con el material original</strong>, el
+              informe previo y el aporte nuevo. Nada se pierde en el camino y la decisión final la toma alguien con todo
+              el contexto a la vista. El agente sólo arma y enruta el caso: el juicio es humano.</p>
+            <ul class="tag-row" aria-label="Elementos del flujo">
+              <li class="tag tag-agent">Agente: registra y arma el caso</li>
+              <li class="tag tag-tool">Herramienta: cola de revisión de informes</li>
+              <li class="tag tag-human">Persona: revisora humana (paso de la sentencia)</li>
+            </ul>
+            <a class="btn-ghost" href="#flujo-2">Ver el diagrama ↓</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ LOS DOS DIAGRAMAS ═══════════ -->
+    <section id="diagramas" class="block">
+      <div class="container">
+        <h2 class="section-title"><span class="num">03</span> Los dos flujos, a simple vista</h2>
+        <p class="section-lead">Cada diagrama muestra inicio, datos de entrada, decisión, acciones y resultado.
+          Usá los botones de caso para resaltar un recorrido completo: uno que cumple la condición y uno que no.
+          Son ejemplos ilustrativos — la página no ejecuta el proceso.</p>
+
+        <!-- ─────── Diagrama 1 ─────── -->
+        <article class="diagram-panel" id="flujo-1" data-panel="f1">
+          <header class="diagram-head">
+            <span class="chip chip-r5">Flujo 1 · R5</span>
+            <h3>Revisión sin evidencia suficiente → resultado no concluyente explicado</h3>
+          </header>
+
+          <div class="diagram-wrap">
+            <svg class="diagram" viewBox="0 0 880 700" role="img" aria-labelledby="f1t f1d" preserveAspectRatio="xMidYMid meet">
+              <title id="f1t">Diagrama del Flujo 1, sentencia R5</title>
+              <desc id="f1d">El usuario sube un archivo sospechoso; el agente lo revisa con herramientas; se decide si la
+                revisión reúne evidencia suficiente. Si no la reúne, se muestra un resultado no concluyente, se explica
+                qué falta y el usuario decide si aporta más. Si la reúne, se emite un informe conclusivo, camino diseñado
+                por el grupo.</desc>
+              <defs>
+                <marker id="arr1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#7f8ea8"/>
+                </marker>
+                <marker id="arr1h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#ffd166"/>
+                </marker>
+              </defs>
+
+              <!-- Inicio -->
+              <g class="fnode n-start" id="f1-start">
+                <rect x="180" y="16" width="520" height="54" rx="27"/>
+                <text x="440" y="49">Inicio: el usuario sube una imagen o video sospechoso</text>
+              </g>
+              <path class="fline" d="M440,70 L440,104" marker-end="url(#arr1)"/>
+
+              <!-- Herramientas -->
+              <g class="fnode n-tool" id="f1-tools">
+                <rect x="160" y="112" width="560" height="78" rx="14"/>
+                <text x="440" y="141">El agente revisa el contenido con herramientas:</text>
+                <text x="440" y="165">metadatos (EXIF/video) · patrones de generación · fuentes</text>
+              </g>
+              <path class="fline" d="M440,190 L440,220" marker-end="url(#arr1)"/>
+
+              <!-- Decisión -->
+              <g class="fnode n-dec" id="f1-dec">
+                <polygon points="190,274 280,226 600,226 690,274 600,322 280,322"/>
+                <text x="440" y="281" class="dec-text">¿La revisión reúne evidencia suficiente?</text>
+              </g>
+
+              <!-- Ramas -->
+              <path class="fbranch" id="f1-b-no" d="M330,322 C295,352 255,350 215,376" marker-end="url(#arr1)"/>
+              <path class="fbranch" id="f1-b-si" d="M550,322 C585,352 625,350 645,376" marker-end="url(#arr1)"/>
+              <g class="branch-chip"><rect x="248" y="332" width="46" height="22" rx="11"/><text x="271" y="348">NO</text></g>
+              <g class="branch-chip"><rect x="588" y="332" width="46" height="22" rx="11"/><text x="611" y="348">SÍ</text></g>
+
+              <!-- Rama NO (la sentencia) -->
+              <g class="fnode n-danger" id="f1-no1">
+                <rect x="75" y="380" width="280" height="60" rx="12"/>
+                <text x="215" y="406">Muestra un resultado</text>
+                <text x="215" y="430">no concluyente</text>
+              </g>
+              <path class="fline" d="M215,440 L215,474" marker-end="url(#arr1)"/>
+              <g class="fnode n-agent" id="f1-no2">
+                <rect x="75" y="482" width="280" height="60" rx="12"/>
+                <text x="215" y="508">Explica qué información</text>
+                <text x="215" y="532">falta (lista concreta)</text>
+              </g>
+              <path class="fline" d="M215,542 L215,576" marker-end="url(#arr1)"/>
+              <g class="fnode n-end" id="f1-no3">
+                <rect x="65" y="584" width="300" height="52" rx="26"/>
+                <text x="215" y="616">Fin · el usuario decide si aporta más</text>
+              </g>
+
+              <!-- Rama SÍ (decisión del grupo) -->
+              <g class="fnode n-group" id="f1-si1">
+                <rect x="505" y="380" width="280" height="84" rx="12"/>
+                <text x="645" y="403" class="sub">Camino diseñado por el grupo</text>
+                <text x="645" y="429">Emite el informe conclusivo</text>
+                <text x="645" y="453">con la evidencia reunida</text>
+              </g>
+              <path class="fline" d="M645,464 L645,500" marker-end="url(#arr1)"/>
+              <g class="fnode n-end" id="f1-si2">
+                <rect x="505" y="506" width="280" height="52" rx="26"/>
+                <text x="645" y="538">Fin · informe con veredicto</text>
+              </g>
+
+              <!-- Encadenamiento con el Flujo 2 -->
+              <g class="fnode n-note" id="f1-note">
+                <rect x="160" y="650" width="560" height="38" rx="10"/>
+                <text x="440" y="674">Si el usuario no acepta el resultado → cuestiona el informe → ver Flujo 2 (R6)</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="diagram-tools">
+            <div class="legend" aria-label="Leyenda del diagrama 1">
+              <span class="leg leg-start">Inicio</span>
+              <span class="leg leg-tool">Herramienta consultada</span>
+              <span class="leg leg-dec">Decisión</span>
+              <span class="leg leg-danger">Resultado de la sentencia</span>
+              <span class="leg leg-agent">Acción del agente</span>
+              <span class="leg leg-group">Camino diseñado por el grupo</span>
+              <span class="leg leg-end">Fin</span>
+            </div>
+            <div class="case-buttons">
+              <button type="button" class="case-btn" data-case="f1-c1" aria-pressed="false">Caso sin evidencia suficiente (cumple la sentencia)</button>
+              <button type="button" class="case-btn" data-case="f1-c2" aria-pressed="false">Caso con evidencia suficiente (camino del grupo)</button>
+              <button type="button" class="case-clear" data-clear>Quitar resaltado</button>
+            </div>
+            <p class="case-caption" aria-live="polite">Recorré un caso con los botones: se resalta el camino completo en el diagrama.</p>
+            <p class="diagram-note"><strong>Qué viene de la sentencia:</strong> si la revisión no reúne evidencia suficiente,
+              se muestra el resultado no concluyente y se explica qué falta. <strong>Qué agrega la propuesta:</strong>
+              consultar herramientas de análisis y encadenar con el Flujo 2. <strong>Qué decide el grupo:</strong> el camino
+              «evidencia suficiente», que la sentencia no define, emite un informe conclusivo.</p>
+          </div>
+        </article>
+
+        <!-- ─────── Diagrama 2 ─────── -->
+        <article class="diagram-panel" id="flujo-2" data-panel="f2">
+          <header class="diagram-head">
+            <span class="chip chip-r6">Flujo 2 · R6</span>
+            <h3>Cuestionamiento con nueva evidencia → pedido registrado y derivado a una persona</h3>
+          </header>
+
+          <div class="diagram-wrap">
+            <svg class="diagram" viewBox="0 0 880 780" role="img" aria-labelledby="f2t f2d" preserveAspectRatio="xMidYMid meet">
+              <title id="f2t">Diagrama del Flujo 2, sentencia R6</title>
+              <desc id="f2d">El usuario cuestiona un informe; el agente identifica el informe original y recibe el
+                cuestionamiento con nueva evidencia. Si cuestiona el informe y aporta nueva evidencia, se registra el
+                pedido de revisión, se deriva a una persona con el material original, se notifica al usuario y continúa
+                la revisión humana. Si falta alguna de las dos condiciones, el sistema pide completar lo que falta,
+                camino diseñado por el grupo.</desc>
+              <defs>
+                <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#7f8ea8"/>
+                </marker>
+                <marker id="arr2h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#ffd166"/>
+                </marker>
+              </defs>
+
+              <!-- Inicio -->
+              <g class="fnode n-start" id="f2-start">
+                <rect x="180" y="16" width="520" height="54" rx="27"/>
+                <text x="440" y="49">Inicio: el usuario recibe un informe y lo cuestiona</text>
+              </g>
+              <path class="fline" d="M440,70 L440,104" marker-end="url(#arr2)"/>
+
+              <!-- Preparación -->
+              <g class="fnode n-agent" id="f2-step2">
+                <rect x="150" y="112" width="580" height="78" rx="14"/>
+                <text x="440" y="141">El agente identifica el informe original y adjunta</text>
+                <text x="440" y="165">el cuestionamiento con la nueva evidencia recibida</text>
+              </g>
+              <path class="fline" d="M440,190 L440,220" marker-end="url(#arr2)"/>
+
+              <!-- Decisión (conjunción) -->
+              <g class="fnode n-dec" id="f2-dec">
+                <polygon points="190,274 280,226 600,226 690,274 600,322 280,322"/>
+                <text x="440" y="281" class="dec-text">¿Cuestiona el informe Y aporta nueva evidencia?</text>
+              </g>
+
+              <!-- Ramas -->
+              <path class="fbranch" id="f2-b-si" d="M330,322 C295,352 255,350 215,376" marker-end="url(#arr2)"/>
+              <path class="fbranch" id="f2-b-no" d="M550,322 C585,352 625,350 645,376" marker-end="url(#arr2)"/>
+              <g class="branch-chip"><rect x="248" y="332" width="46" height="22" rx="11"/><text x="271" y="348">SÍ</text></g>
+              <g class="branch-chip"><rect x="588" y="332" width="46" height="22" rx="11"/><text x="611" y="348">NO</text></g>
+
+              <!-- Rama SÍ (la sentencia) -->
+              <g class="fnode n-agent" id="f2-si1">
+                <rect x="48" y="380" width="334" height="72" rx="12"/>
+                <text x="215" y="407">Registra el pedido de revisión</text>
+                <text x="215" y="431">(ID, fecha y estado «en revisión»)</text>
+              </g>
+              <path class="fline" d="M215,452 L215,488" marker-end="url(#arr2)"/>
+              <g class="fnode n-human" id="f2-si2">
+                <rect x="48" y="494" width="334" height="92" rx="12"/>
+                <text x="215" y="519">Lo deriva a una persona revisora</text>
+                <text x="215" y="543">junto con el material original,</text>
+                <text x="215" y="567">el informe previo y la nueva evidencia</text>
+              </g>
+              <path class="fline" d="M215,586 L215,620" marker-end="url(#arr2)"/>
+              <g class="fnode n-agent" id="f2-si3">
+                <rect x="48" y="628" width="334" height="56" rx="12"/>
+                <text x="215" y="651">Notifica al usuario que una persona</text>
+                <text x="215" y="675">atenderá el caso</text>
+              </g>
+              <path class="fline" d="M215,684 L215,714" marker-end="url(#arr2)"/>
+              <g class="fnode n-end" id="f2-si4">
+                <rect x="48" y="718" width="334" height="48" rx="24"/>
+                <text x="215" y="748">Fin · revisión humana en curso</text>
+              </g>
+
+              <!-- Rama NO (decisión del grupo) -->
+              <g class="fnode n-group" id="f2-no1">
+                <rect x="505" y="380" width="280" height="92" rx="12"/>
+                <text x="645" y="403" class="sub">Camino diseñado por el grupo</text>
+                <text x="645" y="429">Pide completar lo que falta:</text>
+                <text x="645" y="453">cuestionamiento o evidencia</text>
+              </g>
+              <path class="fline" d="M645,472 L645,510" marker-end="url(#arr2)"/>
+              <g class="fnode n-group" id="f2-no2">
+                <rect x="505" y="514" width="280" height="64" rx="12"/>
+                <text x="645" y="540">Sin registro: se reevalúa</text>
+                <text x="645" y="564">cuando llegue lo que falta</text>
+              </g>
+              <path class="fline" d="M645,578 L645,616" marker-end="url(#arr2)"/>
+              <g class="fnode n-end" id="f2-no3">
+                <rect x="505" y="620" width="280" height="48" rx="24"/>
+                <text x="645" y="650">Fin del intento</text>
+              </g>
+
+              <!-- Nota -->
+              <g class="fnode n-note" id="f2-note">
+                <rect x="470" y="690" width="360" height="54" rx="10"/>
+                <text x="650" y="712">Nota: el «material original» es el</text>
+                <text x="650" y="734">archivo revisado en el Flujo 1</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="diagram-tools">
+            <div class="legend" aria-label="Leyenda del diagrama 2">
+              <span class="leg leg-start">Inicio</span>
+              <span class="leg leg-agent">Acción del agente</span>
+              <span class="leg leg-dec">Decisión</span>
+              <span class="leg leg-human">Intervención humana</span>
+              <span class="leg leg-group">Camino diseñado por el grupo</span>
+              <span class="leg leg-end">Fin</span>
+            </div>
+            <div class="case-buttons">
+              <button type="button" class="case-btn" data-case="f2-c1" aria-pressed="false">Caso que cumple: cuestiona + aporta evidencia</button>
+              <button type="button" class="case-btn" data-case="f2-c2" aria-pressed="false">Caso que no cumple: falta la conjunción</button>
+              <button type="button" class="case-clear" data-clear>Quitar resaltado</button>
+            </div>
+            <p class="case-caption" aria-live="polite">Recorré un caso con los botones: se resalta el camino completo en el diagrama.</p>
+            <p class="diagram-note"><strong>Qué viene de la sentencia:</strong> cuestionamiento <em>y</em> nueva evidencia
+              (ambas cosas) → registrar el pedido <em>y</em> derivarlo a una persona con el material original.
+              <strong>Qué agrega la propuesta:</strong> ID y estado del pedido, aviso al usuario y contexto completo
+              (informe previo + evidencia nueva). <strong>Qué decide el grupo:</strong> si falta alguna de las dos
+              condiciones, se pide completar en lugar de registrar.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ DESPLEGABLES ═══════════ -->
+    <section id="detalles" class="block">
+      <div class="container">
+        <h2 class="section-title"><span class="num">04</span> Los detalles de cada solución</h2>
+        <p class="section-lead">Abrí cada desplegable para ver la ficha de la sentencia (datos → condición → consecuencia),
+          qué datos entran, qué se decide, qué acción se propone, el resultado esperado, las excepciones y la
+          intervención humana. Se abren con clic y con teclado (Enter o Espacio sobre el título).</p>
+
+        <!-- Desplegable 1 -->
+        <details class="desplegable">
+          <summary>
+            <span class="chip chip-r5">Flujo 1 · R5</span>
+            <span class="summary-title">«No concluyente, pero útil» — datos, decisión, acción y resultado</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="desplegable-body">
+            <h4>Ficha de la sentencia</h4>
+            <dl class="ficha">
+              <dt>Sentencia original</dt>
+              <dd class="cita">«Si la revisión no reúne evidencia suficiente, el sistema muestra un resultado no
+                concluyente y explica qué información falta.»</dd>
+              <dt>Datos necesarios</dt>
+              <dd>El contenido a revisar (imagen o video); el resultado del análisis (evidencia reunida: metadatos,
+                patrones de generación, coincidencias de fuentes); el criterio de suficiencia; y el detalle de la
+                evidencia faltante.</dd>
+              <dt>Condición</dt>
+              <dd>La revisión <strong>no</strong> reúne evidencia suficiente (una negación: el análisis no alcanza el
+                umbral para pronunciarse).</dd>
+              <dt>Consecuencia</dt>
+              <dd>El sistema muestra un resultado no concluyente <strong>y</strong> explica qué información falta
+                (dos efectos, ambos obligatorios).</dd>
+            </dl>
+
+            <h4>Recorrido propuesto</h4>
+            <ol class="pasos">
+              <li><span class="tag tag-agent">Entrada</span> Llega el archivo sospechoso: imagen o video con su contexto.</li>
+              <li><span class="tag tag-tool">Herramientas</span> El agente consulta el lector de metadatos, el análisis
+                de patrones de generación y la búsqueda de fuentes/coincidencias.</li>
+              <li><span class="tag tag-agent">Decisión</span> ¿La revisión reúne evidencia suficiente?</li>
+              <li><span class="tag tag-danger">Si NO</span> (sentencia R5) muestra el resultado no concluyente y explica
+                qué información falta, con lista concreta.</li>
+              <li><span class="tag tag-group">Si SÍ</span> (decisión del grupo) emite el informe conclusivo con la
+                evidencia reunida.</li>
+            </ol>
+
+            <h4>Resultado esperado</h4>
+            <p>El usuario nunca queda sin explicación: o recibe un veredicto con evidencia, o recibe un
+              “no concluyente” que dice exactamente qué falta para avanzar. Cada revisión queda trazable
+              (qué se analizó, qué se encontró y qué no pudo determinarse).</p>
+
+            <h4>Agente, herramientas y persona</h4>
+            <p><strong>Qué haría el futuro agente:</strong> orquestar el análisis del archivo y redactar el informe en
+              lenguaje claro. <strong>Herramientas que consultaría:</strong> lector de metadatos (EXIF / contenedores de
+              video), detector de patrones de generación y búsqueda de fuentes. <strong>Cuándo pediría ayuda a una
+              persona:</strong> este flujo no escala por sí solo; si el usuario no acepta el resultado y cuestiona el
+              informe con nueva evidencia, el caso pasa al Flujo 2, donde la revisión la hace una persona.</p>
+
+            <h4>Excepciones y casos límite</h4>
+            <ul>
+              <li><strong>Archivo corrupto o ilegible:</strong> el agente informa que el análisis no pudo ejecutarse y
+                lista ese faltante; el resultado sigue siendo no concluyente, nunca “sospechoso” por defecto
+                (decisión del grupo).</li>
+              <li><strong>Metadatos borrados a propósito:</strong> se lista “metadatos ausentes” como información falta,
+                en lugar de tratarlo como evidencia de manipulación (decisión del grupo).</li>
+              <li><strong>Intervención humana:</strong> aparece recién cuando el usuario cuestiona el informe → Flujo 2.</li>
+            </ul>
+
+            <h4>Cómo comprobarlo</h4>
+            <ul>
+              <li>Imagen sin metadatos, sin coincidencias de fuentes y con análisis de patrones inconcluyente →
+                <strong>no concluyente + lista de faltantes</strong> (cumple la sentencia).</li>
+              <li>Video con metadatos coherentes, patrones de captura y fuente verificable → <strong>informe
+                conclusivo</strong> (camino diseñado por el grupo, la sentencia no lo define).</li>
+            </ul>
+
+            <h4>Qué agrega la propuesta respecto de la sentencia</h4>
+            <p>La sentencia sólo define el caso “evidencia insuficiente”. La propuesta agrega las herramientas de
+              análisis, la lista accionable de faltantes y el encadenamiento con el Flujo 2; el camino “evidencia
+              suficiente” es una decisión de diseño del grupo.</p>
+          </div>
+        </details>
+
+        <!-- Desplegable 2 -->
+        <details class="desplegable">
+          <summary>
+            <span class="chip chip-r6">Flujo 2 · R6</span>
+            <span class="summary-title">«Revisión registrada y derivada a una persona» — datos, decisión, acción y resultado</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="desplegable-body">
+            <h4>Ficha de la sentencia</h4>
+            <dl class="ficha">
+              <dt>Sentencia original</dt>
+              <dd class="cita">«Si el usuario cuestiona el informe y aporta nueva evidencia, el sistema registra el
+                pedido de revisión y lo deriva a una persona junto con el material original.»</dd>
+              <dt>Datos necesarios</dt>
+              <dd>El informe previo que se cuestiona; el cuestionamiento del usuario; la nueva evidencia aportada; y el
+                material original (el archivo que se revisó).</dd>
+              <dt>Condición</dt>
+              <dd>El usuario cuestiona el informe <strong>y</strong> aporta nueva evidencia: conjunción — hace falta
+                <strong>ambas</strong> cosas.</dd>
+              <dt>Consecuencia</dt>
+              <dd>Registrar el pedido de revisión <strong>y</strong> derivarlo a una persona junto con el material
+                original: también es una conjunción — ambas acciones ocurren.</dd>
+            </dl>
+
+            <h4>Recorrido propuesto</h4>
+            <ol class="pasos">
+              <li><span class="tag tag-agent">Entrada</span> El usuario recibe un informe y lo cuestiona.</li>
+              <li><span class="tag tag-agent">Preparación</span> El agente identifica el informe original y junta el
+                cuestionamiento con la nueva evidencia.</li>
+              <li><span class="tag tag-agent">Decisión</span> ¿Cuestiona el informe <strong>Y</strong> aporta nueva
+                evidencia?</li>
+              <li><span class="tag tag-agent">Si SÍ</span> (sentencia R6) registra el pedido (ID, fecha, estado) y lo
+                deriva a una persona con el material original, el informe previo y la evidencia nueva.</li>
+              <li><span class="tag tag-human">Humano</span> La persona revisora evalúa el caso; el sistema avisa al
+                usuario que una persona lo atenderá.</li>
+              <li><span class="tag tag-group">Si NO</span> (decisión del grupo) pide completar lo que falta; todavía no
+                se registra ni se deriva nada.</li>
+            </ol>
+
+            <h4>Resultado esperado</h4>
+            <p>Todo pedido queda registrado con identificador y estado, y llega a una persona con el paquete completo:
+              material original, informe cuestionado y evidencia nueva. El usuario recibe aviso de que su caso pasó a
+              revisión humana, y nada depende de que alguien revise un buzón sin contexto.</p>
+
+            <h4>Agente, herramientas y persona</h4>
+            <p><strong>Qué haría el futuro agente:</strong> verificar la conjunción, armar el caso y registrarlo.
+              <strong>Herramienta que consultaría:</strong> la cola de revisión de informes (alta del pedido con ID y
+              estado). <strong>Cuándo pediría ayuda a una persona:</strong> siempre que la condición se cumple — la
+              derivación a una persona es parte de la consecuencia de la sentencia, no un agregado.</p>
+
+            <h4>Excepciones y casos límite</h4>
+            <ul>
+              <li><strong>Falta una de las dos condiciones</strong> (cuestiona sin evidencia, o adjunta material sin
+                cuestionar): no se registra el pedido; el sistema pide completar lo que falta (decisión del grupo).</li>
+              <li><strong>Cuestionamiento impreciso:</strong> si el usuario no indica qué punto del informe disputa, se
+                le pide precisarlo antes de derivar, para que la persona reciba un caso legible (decisión del grupo).</li>
+              <li><strong>Material original no disponible:</strong> el pedido se deriva igual, marcando esa ausencia para
+                que la persona revisora lo tenga en cuenta (decisión del grupo).</li>
+            </ul>
+
+            <h4>Cómo comprobarlo</h4>
+            <ul>
+              <li>El usuario señala el párrafo del informe que disputa y adjunta un análisis nuevo →
+                <strong>registrado + derivado a una persona con el material original</strong> (cumple la sentencia).</li>
+              <li>El usuario sólo escribe “no estoy de acuerdo”, sin evidencia → <strong>se pide completar</strong>;
+                aún no se registra ni se deriva (camino diseñado por el grupo).</li>
+            </ul>
+
+            <h4>Qué agrega la propuesta respecto de la sentencia</h4>
+            <p>La sentencia exige registrar y derivar con el material original. La propuesta agrega ID y estado del
+              pedido, el informe previo y la evidencia nueva en el paquete, el aviso al usuario, y el camino «falta una
+              condición», que la regla no define y es una decisión de diseño del grupo.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="assets/logo-soulless-catcher.webp" alt="Logo de Soulless Catcher" width="48" height="48">
+        <p><strong>Soulless Catcher</strong> · Verificación de contenido digital<br>
+          Startup creada por estudiantes del IFTS 16 · Propuesta de soluciones del equipo de Front End, IFTS 29.</p>
+      </div>
+      <div class="footer-meta">
+        <p>TP3 · Dos sentencias, dos soluciones<br>
+          Bloque: Informe y revisión · Sentencias R5 y R6<br>
+          Entrega: 26/11/2026</p>
+        <p class="fill-note"><span class="fill">Repositorio y landing publicada: agregar enlaces en el README</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
