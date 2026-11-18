@@ -34,7 +34,7 @@ Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación p
 | --- | --- | --- | --- |
 | Ignacio Tomás Humphreys | [Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) | _…completar_ | _…completar_ |
 | Lihue Anker Díaz | [AnkerYeray](https://github.com/AnkerYeray) | _…completar_ | _…completar_ |
-| Cristel Nazarena Frías | _…completar_ | _…completar_ | _…completar_ |
+| Cristel Nazarena Frías | [CristelFrias](https://github.com/CristelFrias) | _…completar_ | _…completar_ |
 | Lucas Federico De Diego | [lucasfedericodd](https://github.com/lucasfedericodd) | _…completar_ | _…completar_ |
 | David Sebastian Giordano Rodriguez | [Sebastian1601](https://github.com/Sebastian1601) | _…completar_ | _…completar_ |
 
