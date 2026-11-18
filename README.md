@@ -13,7 +13,7 @@ Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación p
 | Servicio | Verificación de contenido digital |
 | Objetivo | Asistente para revisar imágenes y videos sospechosos de haber sido generados con IA |
 | Bloque | **Informe y revisión** |
-| Asignación docente (sorteo) | **S04-C** (grupos 03 / 25 / 36) |
+| Asignación docente (sorteo) | **S04-C** · Grupo **03** |
 | Sentencias | **FRASE 1 · R5** y **FRASE 2 · R6** |
 | Logo original | `assets/logo-soulless-catcher.webp` — descargado del material asignado ([logos/S04.webp](https://ifts29-portada.vercel.app/trayecto/tp3/logos/S04.webp)), se usa completo y legible en la landing |
 | Origen | Startup creada por estudiantes del **IFTS 16** (condiciones expresadas con lógica proposicional) |
@@ -28,15 +28,22 @@ Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación p
 
 ## Grupo
 
-> ⚠️ **Completar antes de publicar:** número de grupo, integrantes y aportes concretos (requisito de la rúbrica 01).
-> También hay campos marcados en amarillo dentro de `index.html` (equipo en la landing y enlaces en el pie).
+**Grupo 03** · mismos integrantes que en TP1 y TP2.
 
-| Integrante | Rol acordado | Aporte concreto |
-| --- | --- | --- |
-| _…completar_ | Coordinación de instrucciones al agente | _…completar_ |
-| _…completar_ | Revisión de sentencias y flujos | _…completar_ |
-| _…completar_ | Pruebas de la página (desktop, desplegables, casos) | _…completar_ |
-| _…completar_ | Publicación y documentación | _…completar_ |
+| Integrante | GitHub | Rol acordado | Aporte concreto |
+| --- | --- | --- | --- |
+| Ignacio Tomás Humphreys | [Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) | _…completar_ | _…completar_ |
+| Lihue Anker Díaz | [AnkerYeray](https://github.com/AnkerYeray) | _…completar_ | _…completar_ |
+| Cristel Nazarena Frías | _…completar_ | _…completar_ | _…completar_ |
+| Lucas Federico De Diego | [lucasfedericodd](https://github.com/lucasfedericodd) | _…completar_ | _…completar_ |
+| David Sebastian Giordano Rodriguez | [Sebastian1601](https://github.com/Sebastian1601) | _…completar_ | _…completar_ |
+
+> ⚠️ **Completar antes de publicar:** rol y aporte **concreto** de cada integrante (rúbrica 01). No se completaron acá porque solo el grupo sabe quién hizo qué.
+> Roles que sugiere la consigna: coordinar las instrucciones al agente · revisar sentencias y flujos · probar la página · preparar la publicación (pueden rotarlos).
+
+### Revisión entre integrantes (para el nivel “Propone” de la rúbrica 01)
+
+_…completar: una revisión que se hicieron entre ustedes y la mejora concreta que surgió de esa colaboración._
 
 ---
 
@@ -86,7 +93,9 @@ tp3/
 
 ## Cómo se construyó (100% agéntico)
 
-El grupo dirigió; el agente generó y modificó **todos** los archivos. Nadie editó código a mano: se pidieron instrucciones, se revisó el resultado y se volvió a pedir cambios.
+El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie editó código a mano: se pidieron instrucciones, se revisó el resultado y se volvió a pedir cambios. Se usaron **dos herramientas**, registradas por separado.
+
+### Herramienta 1 · OpenCode
 
 | Campo | Registro |
 | --- | --- |
@@ -95,20 +104,31 @@ El grupo dirigió; el agente generó y modificó **todos** los archivos. Nadie e
 | Para qué se usó | Leer y evaluar la consigna (PDF), recuperar la asignación oficial y el logo desde la web de la materia, y generar/iterar todos los archivos del proyecto: estructura, copywriting, diagramas SVG, estilos, interacciones y documentación |
 | Cambios solicitados | ver registro de iteración ↓ |
 
-> Si el grupo alternó otras herramientas (Cursor, Codex, etc.), agreguen una fila por cada una. Si una aplicación no informa el modelo, escriban **“modelo no informado”**; no lo inventen.
+### Herramienta 2 · Claude
+
+| Campo | Registro |
+| --- | --- |
+| **Aplicación** (entorno de trabajo) | **Claude** (asistente de Anthropic, usado desde su chat web/app) |
+| **Modelo** (tal como lo informa el asistente) | **Claude Sonnet 5.5** — |
+| Plan | gratuito |
+| Para qué se usó | Revisar lo ya construido contra la consigna y la rúbrica; probar la landing en un navegador (desktop) midiendo desbordes en cuatro anchos, desplegables con clic y teclado, botones de casos y enlaces internos; detectar errores; y aplicar correcciones puntuales en `README.md` y `index.html` (datos del equipo, enlace del repositorio y un nodo del diagrama 2) |
+| Cambios solicitados | ver registro de iteración (fila 2) |
+
+> Si el grupo usa otras herramientas (Cursor, Codex, etc.), agreguen una sección por cada una. Si una aplicación no informa el modelo, escriban **“modelo no informado”**; no lo inventen.
 
 ### Registro de iteración (evidencia para el nivel “Propone”)
 
-| # | Instrucción inicial | Problema detectado | Pedido de mejora | Qué cambió y por qué |
-| --- | --- | --- | --- | --- |
-| 1 | _Ej.: “Armá la landing con la consigna y las dos frases de Soulless Catcher”_ | _Ej.: un diagrama quedaba cortado en desktop_ | _Ej.: “achicá los nodos / hacer scroll horizontal del diagrama”_ | _Ej.: el diagrama ahora se lee completo sin desbordes_ |
-| 2 | _(completar con iteraciones reales)_ | | | |
+| # | Herramienta | Instrucción inicial | Problema detectado | Pedido de mejora | Qué cambió y por qué |
+| --- | --- | --- | --- | --- | --- |
+| 1 | OpenCode | _…completar con la instrucción real que se le dio_ | _…completar_ | _…completar_ | _…completar_ |
+| 2 | Claude | Se le pasaron la consigna, la rúbrica y el proyecto ya generado, y se le pidió revisarlo y dejarlo listo para entregar | (a) El README decía que la asignación S04-C correspondía a los grupos 03 / 25 / 36, pero según el listado de la consigna solo corresponde al grupo 03 (el 25 es S04-A y el 36 es S04-B). (b) En el diagrama 2, el paso «Notifica al usuario» figura como supuesto del grupo en `docs/fichas.md`, pero estaba dibujado con borde sólido, igual que lo que define la sentencia. (c) Faltaban el número de grupo, los integrantes y el enlace del repositorio | Corregir el README, mostrar ese paso como camino diseñado por el grupo y completar los datos del equipo y el repositorio | README: asignación corregida a «S04-C · Grupo 03», equipo cargado y herramientas declaradas. Landing: el nodo pasó a borde punteado (la leyenda ya lo explica como «Camino diseñado por el grupo»), se cargó «Grupo 03» con sus integrantes y se enlazó el repositorio en el pie |
+| 3 | _…_ | _…completar con iteraciones reales_ | | | |
 
 ---
 
 ## Publicación (completar antes de entregar)
 
-- [ ] **Repositorio del grupo:** `https://…` _(agregar enlace)_
+- [ ] **Repositorio del grupo:** <https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> _(probar desde una ventana sin sesión que sea público)_
 - [ ] **Landing publicada:** `https://…` _(agregar enlace; por ejemplo GitHub Pages, Netlify o Vercel)_
 - [ ] Ambos enlaces probados **desde una ventana sin sesión**
 - [ ] Los dos enlaces quedan identificados en este README
@@ -116,6 +136,8 @@ El grupo dirigió; el agente generó y modificó **todos** los archivos. Nadie e
 ---
 
 ## Checklist contra la rúbrica
+
+_Tildado = ya verificado (prueba en navegador de escritorio y revisión del contenido). Lo que sigue sin tildar lo tiene que comprobar el grupo._
 
 **01 · Participación**
 - [ ] Todos participan y pueden explicar las dos propuestas
@@ -126,20 +148,20 @@ El grupo dirigió; el agente generó y modificó **todos** los archivos. Nadie e
 - [ ] README con el enlace correcto a la landing final
 
 **03 · Landing acorde a la consigna**
-- [ ] Startup con su logo original completo y legible
-- [ ] Las dos sentencias con su redacción original
-- [ ] Una propuesta por sentencia (título + beneficio)
-- [ ] Los dos diagramas dentro de la página
-- [ ] Desplegables con datos, decisión, acción, resultado, excepciones e intervención humana
-- [ ] Se recorre bien en desktop, sin desbordes; desplegables con clic **y** teclado (Enter/Espacio)
+- [x] Startup con su logo original completo y legible
+- [x] Las dos sentencias con su redacción original
+- [x] Una propuesta por sentencia (título + beneficio)
+- [x] Los dos diagramas dentro de la página
+- [x] Desplegables con datos, decisión, acción, resultado, excepciones e intervención humana
+- [x] Se recorre bien en desktop, sin desbordes; desplegables con clic **y** teclado (Enter/Espacio)
 
 **04 · Dos flujos agénticos**
-- [ ] Un diagrama por sentencia, con datos, decisiones, acciones y resultados coherentes
-- [ ] Se distinguen los supuestos agregados (borde punteado = camino del grupo)
-- [ ] Caso límite / excepción explicada en cada flujo, con intervención humana cuando corresponde
-- [ ] Recorrido probado: un caso que cumple y uno que no, por cada flujo
+- [x] Un diagrama por sentencia, con datos, decisiones, acciones y resultados coherentes
+- [x] Se distinguen los supuestos agregados (borde punteado = camino del grupo)
+- [x] Caso límite / excepción explicada en cada flujo, con intervención humana cuando corresponde
+- [x] Recorrido probado: un caso que cumple y uno que no, por cada flujo
 
 **05 · Herramientas de IA**
-- [ ] Aplicación y modelo declarados (o “modelo no informado”)
+- [x] Aplicación y modelo declarados (o “modelo no informado”)
 - [ ] Usos y aportes del grupo descritos
 - [ ] Iteración documentada (instrucción → problema → mejora → qué cambió)
