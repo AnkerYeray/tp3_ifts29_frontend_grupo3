@@ -111,7 +111,7 @@
   });
 
   /* ── Navegación: sección visible → enlace activo ── */
-  var links = Array.prototype.slice.call(document.querySelectorAll(".main-nav a"));
+  var links = Array.prototype.slice.call(document.querySelectorAll(".sidebar-nav a"));
   var sections = links
     .map(function (a) {
       return document.querySelector(a.getAttribute("href"));
@@ -124,7 +124,13 @@
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           links.forEach(function (a) {
-            a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
+            var isActive = a.getAttribute("href") === "#" + entry.target.id;
+            a.classList.toggle("active", isActive);
+            if (isActive) {
+              a.setAttribute("aria-current", "location");
+            } else {
+              a.removeAttribute("aria-current");
+            }
           });
         });
       },
@@ -132,6 +138,21 @@
     );
     sections.forEach(function (section) {
       observer.observe(section);
+    });
+  }
+
+  var easterEgg = document.querySelector(".easter-egg");
+  if (easterEgg) {
+    easterEgg.addEventListener("click", function () {
+      var page = document.createElement("main");
+      var message = document.createElement("p");
+      page.className = "easter-egg-page";
+      message.className = "easter-egg-message";
+      message.textContent =
+        "Soulless Catcher, un guiño a lo que fui, ahora convertido en otro usuario de IA del montón, a la fuerza, sin alma, sin pasión... el código manual, como el David de Miguel Angel, será visto en un museo, y extrañaremos las épocas de la inteligencia humana";
+      page.appendChild(message);
+      document.body.replaceChildren(page);
+      document.body.classList.add("easter-egg-open");
     });
   }
 })();

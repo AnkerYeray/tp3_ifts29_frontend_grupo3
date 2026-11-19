@@ -16,14 +16,18 @@
         <img src="assets/logo-soulless-catcher.webp" alt="Logo de Soulless Catcher" width="36" height="36">
         <span>Soulless&nbsp;Catcher</span>
       </a>
-      <nav class="main-nav" aria-label="Secciones de la página">
-        <a href="#presentacion">Presentación</a>
-        <a href="#propuestas">Propuestas</a>
-        <a href="#diagramas">Diagramas</a>
-        <a href="#detalles">Detalles</a>
-      </nav>
     </div>
   </header>
+
+  <aside class="step-sidebar" aria-label="Navegación por los pasos">
+    <p class="sidebar-title">Recorrido</p>
+    <nav class="sidebar-nav" aria-label="Pasos del proyecto">
+      <a href="#necesidad"><span class="sidebar-num">01</span><span>La startup y su necesidad</span></a>
+      <a href="#propuestas"><span class="sidebar-num">02</span><span>Dos propuestas, una por sentencia</span></a>
+      <a href="#diagramas"><span class="sidebar-num">03</span><span>Los dos flujos, a simple vista</span></a>
+      <a href="#detalles"><span class="sidebar-num">04</span><span>Los detalles de cada solución</span></a>
+    </nav>
+  </aside>
 
   <main id="inicio">
 
@@ -50,7 +54,7 @@
       </div>
     </section>
 
-    <section class="block">
+    <section id="necesidad" class="block">
       <div class="container">
         <h2 class="section-title"><span class="num">01</span> La startup y su necesidad</h2>
         <div class="two-col">
@@ -555,6 +559,7 @@
         <p>Repositorio del grupo:<br><a href="https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3" target="_blank" rel="noopener noreferrer">github.com/AnkerYeray/tp3_ifts29_frontend_grupo3</a></p>
       </div>
     </div>
+    <button class="easter-egg" type="button" aria-label="Mostrar un mensaje oculto" title="Un detalle escondido"></button>
   </footer>
 
   <script src="js/main.js"></script>
