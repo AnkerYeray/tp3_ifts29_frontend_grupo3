@@ -141,6 +141,71 @@
     });
   }
 
+  /* ── Simuladores educativos R5 y R6 ── */
+  function clearResult(result) {
+    result.replaceChildren();
+    result.classList.remove("is-success", "is-warning");
+  }
+
+  function showResult(result, success, title, description, items) {
+    clearResult(result);
+    result.classList.add(success ? "is-success" : "is-warning");
+    var heading = document.createElement("strong");
+    heading.textContent = title;
+    var paragraph = document.createElement("p");
+    paragraph.textContent = description;
+    result.append(heading, paragraph);
+    if (items && items.length) {
+      var list = document.createElement("ul");
+      items.forEach(function (item) {
+        var li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+      result.appendChild(list);
+    }
+  }
+
+  function setupSimulator(formId, resultId, simulate) {
+    var form = document.getElementById(formId);
+    var result = document.getElementById(resultId);
+    if (!form || !result) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) return;
+      simulate(new FormData(form), result);
+    });
+    form.addEventListener("change", function () { clearResult(result); });
+    form.addEventListener("reset", function () { clearResult(result); });
+  }
+
+  setupSimulator("sim-r5", "sim-r5-result", function (data, result) {
+    if (data.get("evidence") === "si") {
+      showResult(result, true, "Informe conclusivo (simulado)",
+        "Camino diseñado por el grupo: se emite un informe con la evidencia reunida.");
+    } else {
+      showResult(result, false, "Resultado no concluyente", 
+        "La evidencia es insuficiente. Ejemplos de información que podría faltar:",
+        ["Metadatos del archivo original.", "Una fuente verificable.", "Resultados adicionales del análisis de patrones."]);
+    }
+  });
+
+  setupSimulator("sim-r6", "sim-r6-result", function (data, result) {
+    var question = data.get("question") === "si";
+    var evidence = data.get("newEvidence") === "si";
+    if (question && evidence) {
+      showResult(result, true, "Pedido registrado y derivado (simulado)",
+        "ID de ejemplo: REV-001 · Estado: en revisión humana.",
+        ["Material original.", "Informe previo y cuestionamiento.", "Nueva evidencia aportada."]);
+    } else {
+      var missing = [];
+      if (!question) missing.push("Cuestionar el informe.");
+      if (!evidence) missing.push("Aportar nueva evidencia.");
+      showResult(result, false, "Condiciones incompletas",
+        "Camino diseñado por el grupo: no se registra ni se deriva el pedido. Falta:", missing);
+    }
+  });
+
   var easterEgg = document.querySelector(".easter-egg");
   if (easterEgg) {
     easterEgg.addEventListener("click", function () {

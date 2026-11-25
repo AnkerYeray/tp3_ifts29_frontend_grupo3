@@ -1,12 +1,12 @@
 # TP3 · Dos sentencias, dos soluciones — Soulless Catcher
 
 **Desarrollo de Sistemas Web · Front End · IFTS 29 · 2° cuatrimestre 2026**
+
 Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación por rúbrica (Aprobado / Desaprobado)
 
 ---
 
 ## La startup asignada
-
 | Dato | Valor |
 | --- | --- |
 | Startup | **Soulless Catcher** |
@@ -29,16 +29,16 @@ Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación p
 ## Grupo
 
 **Grupo 03** · mismos integrantes que en TP1 y TP2.
-
 | Integrante | GitHub | Rol acordado | Aporte concreto |
 | --- | --- | --- | --- |
 | Ignacio Tomás Humphreys | [Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) | _…completar_ | _…completar_ |
 | Lihue Anker Díaz | [AnkerYeray](https://github.com/AnkerYeray) | _…completar_ | _…completar_ |
-| Cristel Nazarena Frías | [CristelFrias](https://github.com/CristelFrias) | _…completar_ | _…completar_ |
+| Cristel Nazarena Frías | [CristelFrias](https://github.com/CristelFrias) | Desarrollo de interactividad y revisión funcional | Incorporación de simuladores R5 y R6 con ChatGPT; revisión y pruebas de la landing en el navegador. |
 | Lucas Federico De Diego | [lucasfedericodd](https://github.com/lucasfedericodd) | _…completar_ | _…completar_ |
 | David Sebastian Giordano Rodriguez | [Sebastian1601](https://github.com/Sebastian1601) | _…completar_ | _…completar_ |
 
 > ⚠️ **Completar antes de publicar:** rol y aporte **concreto** de cada integrante (rúbrica 01). No se completaron acá porque solo el grupo sabe quién hizo qué.
+
 > Roles que sugiere la consigna: coordinar las instrucciones al agente · revisar sentencias y flujos · probar la página · preparar la publicación (pueden rotarlos).
 
 ### Revisión entre integrantes (para el nivel “Propone” de la rúbrica 01)
@@ -50,13 +50,18 @@ _…completar: una revisión que se hicieron entre ustedes y la mejora concreta 
 ## Qué contiene la landing
 
 1. **Presentación** — logo original completo, nombre, servicio, descripción del problema, equipo, bloque asignado y origen IFTS 16.
+
 2. **Dos propuestas** — una por sentencia, cada una con la sentencia original, un título y su beneficio explicado en dos o tres frases.
+
 3. **Dos diagramas** (SVG) — inicio → datos → decisión → acciones → resultado, con flechas y alternativas rotuladas; incluyen un paso de intervención humana (Flujo 2) y marcan con borde punteado los caminos que la sentencia no define (decisiones del grupo).
+
 4. **Desplegables** — ficha de cada sentencia (sentencia → datos necesarios → condición → consecuencia), recorrido propuesto, herramientas del agente, excepciones y casos límite, cómo comprobarlo y qué agrega la propuesta.
+
 5. **Casos interactivos** — botones que resaltan en el diagrama un recorrido que cumple la condición y otro que no (ejemplo ilustrativo: la página no ejecuta el proceso).
 
-### Las dos propuestas
+6. **Simulador interactivo** — sección 05 «Poné a prueba nuestras soluciones»: dos combinaciones de R5 y cuatro de R6, resultados explicativos y reinicio independiente. Es una simulación local, sin análisis ni registros reales.
 
+### Las dos propuestas
 | | Título | Idea breve |
 | --- | --- | --- |
 | Flujo 1 · R5 | **«No concluyente, pero útil»** | Si el análisis no alcanza, el usuario recibe un resultado no concluyente con la lista concreta de qué falta, en vez de un “no sabemos” vacío. |
@@ -71,7 +76,6 @@ No necesita build ni dependencias (HTML + CSS + JS puros):
 ```bash
 # opción 1: abrir directo
 open index.html          # o doble clic en el archivo
-
 # opción 2: servirlo en local
 python3 -m http.server 8080
 # → http://localhost:8080
@@ -82,8 +86,8 @@ Estructura:
 ```
 tp3/
 ├── index.html                  # landing completa
-├── css/styles.css              # estilos y leyenda de nodos SVG
-├── js/main.js                  # resaltado de casos + navegación activa
+├── css/styles.css              # estilos, leyenda de nodos SVG y simuladores
+├── js/main.js                  # resaltado de casos + navegación activa + simuladores
 ├── assets/logo-soulless-catcher.webp  # logo original S04 (512×512)
 ├── docs/fichas.md              # fichas de las sentencias (punto de control 3) y títulos (punto 4)
 └── README.md                   # este archivo
@@ -93,10 +97,9 @@ tp3/
 
 ## Cómo se construyó (100% agéntico)
 
-El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie editó código a mano: se pidieron instrucciones, se revisó el resultado y se volvió a pedir cambios. Se usaron **dos herramientas**, registradas por separado.
+El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie editó código a mano: se pidieron instrucciones, se revisó el resultado y se volvió a pedir cambios. Se usaron **tres herramientas**, registradas por separado.
 
 ### Herramienta 1 · OpenCode
-
 | Campo | Registro |
 | --- | --- |
 | **Aplicación** (entorno de trabajo) | **OpenCode** |
@@ -105,7 +108,6 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 | Cambios solicitados | ver registro de iteración ↓ |
 
 ### Herramienta 2 · Claude
-
 | Campo | Registro |
 | --- | --- |
 | **Aplicación** (entorno de trabajo) | **Claude** (asistente de Anthropic, usado desde su chat web/app) |
@@ -116,19 +118,27 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 
 > Si el grupo usa otras herramientas (Cursor, Codex, etc.), agreguen una sección por cada una. Si una aplicación no informa el modelo, escriban **“modelo no informado”**; no lo inventen.
 
-### Registro de iteración (evidencia para el nivel “Propone”)
+### Herramienta 3 · ChatGPT
 
+| Campo | Registro |
+| --- | --- |
+| Aplicación | ChatGPT (OpenAI), chat web |
+| Modelo | GPT-6.2 (informado por el asistente) |
+| Para qué se usó | Revisar la landing existente, proponer y generar los archivos completos del simulador interactivo R5/R6 y actualizar la documentación. |
+| Modalidad | Cristel dirigió las instrucciones, reemplazó los archivos generados en VS Code y comprobó el funcionamiento local; gestión de rama mediante GitHub Desktop. |
+
+### Registro de iteración (evidencia para el nivel “Propone”)
 | # | Herramienta | Instrucción inicial | Problema detectado | Pedido de mejora | Qué cambió y por qué |
 | --- | --- | --- | --- | --- | --- |
 | 1 | OpenCode | _…completar con la instrucción real que se le dio_ | _…completar_ | _…completar_ | _…completar_ |
 | 2 | Claude | Se le pasaron la consigna, la rúbrica y el proyecto ya generado, y se le pidió revisarlo y dejarlo listo para entregar | (a) El README decía que la asignación S04-C correspondía a los grupos 03 / 25 / 36, pero según el listado de la consigna solo corresponde al grupo 03 (el 25 es S04-A y el 36 es S04-B). (b) En el diagrama 2, el paso «Notifica al usuario» figura como supuesto del grupo en `docs/fichas.md`, pero estaba dibujado con borde sólido, igual que lo que define la sentencia. (c) Faltaban el número de grupo, los integrantes y el enlace del repositorio | Corregir el README, mostrar ese paso como camino diseñado por el grupo y completar los datos del equipo y el repositorio | README: asignación corregida a «S04-C · Grupo 03», equipo cargado y herramientas declaradas. Landing: el nodo pasó a borde punteado (la leyenda ya lo explica como «Camino diseñado por el grupo»), se cargó «Grupo 03» con sus integrantes y se enlazó el repositorio en el pie |
-| 3 | _…_ | _…completar con iteraciones reales_ | | | |
+| 3 | ChatGPT | «necesito agregar o modificar algo»; se aceptó la propuesta de un simulador interactivo. | Los casos existentes eran predeterminados; no permitían elegir independientemente todas las condiciones. | «acordate que necesito todo el codigo entero para no equivocarme»; conservar diseño, diagramas y mensaje oculto. | Se generaron los archivos completos index.html, css/styles.css y js/main.js con simuladores R5 y R6, resultados y reinicio. |
+| 4 | ChatGPT | Probar la landing actualizada. | La sección nueva no aparecía porque index.html no se había guardado. | Revisar los archivos modificados y guardar el HTML. | La sección apareció y Cristel confirmó haber revisado el funcionamiento. |
 
 ---
 
 ## Publicación (completar antes de entregar)
-
-- [ ] **Repositorio del grupo:** <https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> _(probar desde una ventana sin sesión que sea público)_
+- [ ] **Repositorio del grupo:** \<https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> _(probar desde una ventana sin sesión que sea público)_
 - [ ] **Landing publicada:** `https://…` _(agregar enlace; por ejemplo GitHub Pages, Netlify o Vercel)_
 - [ ] Ambos enlaces probados **desde una ventana sin sesión**
 - [ ] Los dos enlaces quedan identificados en este README
@@ -160,6 +170,7 @@ _Tildado = ya verificado (prueba en navegador de escritorio y revisión del cont
 - [x] Se distinguen los supuestos agregados (borde punteado = camino del grupo)
 - [x] Caso límite / excepción explicada en cada flujo, con intervención humana cuando corresponde
 - [x] Recorrido probado: un caso que cumple y uno que no, por cada flujo
+- [x] Simuladores R5 y R6 revisados localmente por Cristel (confirmación de la integrante).
 
 **05 · Herramientas de IA**
 - [x] Aplicación y modelo declarados (o “modelo no informado”)
