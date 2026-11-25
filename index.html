@@ -26,6 +26,7 @@
       <a href="#propuestas"><span class="sidebar-num">02</span><span>Dos propuestas, una por sentencia</span></a>
       <a href="#diagramas"><span class="sidebar-num">03</span><span>Los dos flujos, a simple vista</span></a>
       <a href="#detalles"><span class="sidebar-num">04</span><span>Los detalles de cada solución</span></a>
+      <a href="#simulador"><span class="sidebar-num">05</span><span>Simulador interactivo</span></a>
     </nav>
   </aside>
 
@@ -541,6 +542,54 @@
               condición», que la regla no define y es una decisión de diseño del grupo.</p>
           </div>
         </details>
+      </div>
+    </section>
+
+    <!-- ═══════════ SIMULADOR INTERACTIVO ═══════════ -->
+    <section id="simulador" class="block">
+      <div class="container">
+        <h2 class="section-title"><span class="num">05</span> Poné a prueba nuestras soluciones</h2>
+        <p class="section-lead">Elegí las condiciones de cada flujo y observá el resultado. Esta simulación es ilustrativa: no analiza archivos ni registra pedidos reales.</p>
+        <div class="two-col simulator-grid">
+          <article class="panel simulator-panel">
+            <span class="chip chip-r5">Flujo 1 · R5</span>
+            <h3>Simulación de análisis de evidencia</h3>
+            <form id="sim-r5" class="sim-form">
+              <fieldset>
+                <legend>¿La revisión reúne evidencia suficiente?</legend>
+                <label><input type="radio" name="evidence" value="si" required> Sí, reúne evidencia suficiente.</label>
+                <label><input type="radio" name="evidence" value="no" required> No, falta información.</label>
+              </fieldset>
+              <div class="sim-actions">
+                <button type="submit" class="case-btn">Simular resultado</button>
+                <button type="reset" class="case-clear">Reiniciar</button>
+              </div>
+              <div id="sim-r5-result" class="sim-result" role="status" aria-live="polite"></div>
+            </form>
+          </article>
+          <article class="panel simulator-panel">
+            <span class="chip chip-r6">Flujo 2 · R6</span>
+            <h3>Simulación de revisión humana</h3>
+            <form id="sim-r6" class="sim-form">
+              <fieldset>
+                <legend>¿El usuario cuestiona el informe?</legend>
+                <label><input type="radio" name="question" value="si" required> Sí</label>
+                <label><input type="radio" name="question" value="no" required> No</label>
+              </fieldset>
+              <fieldset>
+                <legend>¿Aporta nueva evidencia?</legend>
+                <label><input type="radio" name="newEvidence" value="si" required> Sí</label>
+                <label><input type="radio" name="newEvidence" value="no" required> No</label>
+              </fieldset>
+              <div class="sim-actions">
+                <button type="submit" class="case-btn">Simular revisión</button>
+                <button type="reset" class="case-clear">Reiniciar</button>
+              </div>
+              <div id="sim-r6-result" class="sim-result" role="status" aria-live="polite"></div>
+            </form>
+          </article>
+        </div>
+        <p class="note">R5 permite explorar la negación de una condición. R6 permite comprobar las cuatro combinaciones de una conjunción lógica. Se supone que el material original está disponible.</p>
       </div>
     </section>
   </main>
