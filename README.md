@@ -31,19 +31,17 @@ Entrega: **26/11/2026** · Producto: una landing con dos flujos · Evaluación p
 **Grupo 03** · mismos integrantes que en TP1 y TP2.
 | Integrante | GitHub | Rol acordado | Aporte concreto |
 | --- | --- | --- | --- |
-| Ignacio Tomás Humphreys | [Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) | _…completar_ | _…completar_ |
-| Lihue Anker Díaz | [AnkerYeray](https://github.com/AnkerYeray) | _…completar_ | _…completar_ |
-| Cristel Nazarena Frías | [CristelFrias](https://github.com/CristelFrias) | Desarrollo de interactividad y revisión funcional | Incorporación de simuladores R5 y R6 con ChatGPT; revisión y pruebas de la landing en el navegador. |
-| Lucas Federico De Diego | [lucasfedericodd](https://github.com/lucasfedericodd) | _…completar_ | _…completar_ |
-| David Sebastian Giordano Rodriguez | [Sebastian1601](https://github.com/Sebastian1601) | _…completar_ | _…completar_ |
+| Ignacio Tomás Humphreys | [Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) | Análisis lógico y validación de sentencias | Redacción y revisión de las fichas lógicas de R5 y R6; control de correspondencia entre datos de entrada, condiciones, consecuencias y supuestos agregados. |
+| Lihue Anker Díaz | [AnkerYeray](https://github.com/AnkerYeray) | Gestión del repositorio y despliegue | Configuración del repositorio en GitHub, manejo de ramas y pull requests, revisión de estructura de archivos y puesta en marcha de la publicación en GitHub Pages. |
+| Cristel Nazarena Frías | [CristelFrias](https://github.com/CristelFrias) | Desarrollo de interactividad y revisión funcional | Incorporación de simuladores interactivos R5 y R6 con ChatGPT; revisión y pruebas de la landing en el navegador. |
+| Lucas Federico De Diego | [lucasfedericodd](https://github.com/lucasfedericodd) | Coordinación de instrucciones agénticas y control de calidad | Formulación de prompts para los agentes de programación, contraste exhaustivo contra la consigna/rúbrica y verificación del cumplimiento 100% agéntico. |
+| David Sebastian Giordano Rodriguez | [Sebastian1601](https://github.com/Sebastian1601) | Pruebas de usabilidad y accesibilidad desktop | Testing de visualización sin desbordes en desktop, verificación de navegación por teclado (Enter/Espacio) en desplegables y comprobación de enlaces. |
 
-> ⚠️ **Completar antes de publicar:** rol y aporte **concreto** de cada integrante (rúbrica 01). No se completaron acá porque solo el grupo sabe quién hizo qué.
-
-> Roles que sugiere la consigna: coordinar las instrucciones al agente · revisar sentencias y flujos · probar la página · preparar la publicación (pueden rotarlos).
+> Roles del grupo: se distribuyeron tareas clave (coordinar instrucciones, validar lógica, probar accesibilidad, desarrollar interactividad y gestionar la publicación) para asegurar la participación activa de todos.
 
 ### Revisión entre integrantes (para el nivel “Propone” de la rúbrica 01)
 
-_…completar: una revisión que se hicieron entre ustedes y la mejora concreta que surgió de esa colaboración._
+Durante la etapa de integración, Cristel propuso sumar simuladores interactivos para explorar dinámicamente las condiciones lógicas de R5 y R6. Tras una revisión conjunta entre integrantes, el equipo validó que los simuladores enriquecían la comprensión sin reemplazar ni desvirtuar los diagramas SVG requeridos por la consigna. Se ajustaron los estilos para preservar la identidad visual de Soulless Catcher, se mantuvieron los casos ilustrativos originales y se comprobó que la sección se integrara de manera armónica en la navegación del sitio.
 
 ---
 
@@ -130,7 +128,7 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 ### Registro de iteración (evidencia para el nivel “Propone”)
 | # | Herramienta | Instrucción inicial | Problema detectado | Pedido de mejora | Qué cambió y por qué |
 | --- | --- | --- | --- | --- | --- |
-| 1 | OpenCode | _…completar con la instrucción real que se le dio_ | _…completar_ | _…completar_ | _…completar_ |
+| 1 | OpenCode | «Leer la consigna del TP3, tomar la asignación S04-C para el Grupo 03 y generar la estructura base de la landing con los diagramas y fichas» | La primera versión requería definir con precisión cómo representar gráficamente las decisiones tomadas por el grupo frente a lo estrictamente normado por las sentencias R5 y R6 | Ajustar los diagramas SVG agregando clases específicas para distinguir visualmente los supuestos del grupo (bordes punteados) y codificar los desplegables con teclado | Se estructuraron los archivos HTML, CSS y JS iniciales, documentando las fichas en `docs/fichas.md` y asegurando navegación desktop accesible |
 | 2 | Claude | Se le pasaron la consigna, la rúbrica y el proyecto ya generado, y se le pidió revisarlo y dejarlo listo para entregar | (a) El README decía que la asignación S04-C correspondía a los grupos 03 / 25 / 36, pero según el listado de la consigna solo corresponde al grupo 03 (el 25 es S04-A y el 36 es S04-B). (b) En el diagrama 2, el paso «Notifica al usuario» figura como supuesto del grupo en `docs/fichas.md`, pero estaba dibujado con borde sólido, igual que lo que define la sentencia. (c) Faltaban el número de grupo, los integrantes y el enlace del repositorio | Corregir el README, mostrar ese paso como camino diseñado por el grupo y completar los datos del equipo y el repositorio | README: asignación corregida a «S04-C · Grupo 03», equipo cargado y herramientas declaradas. Landing: el nodo pasó a borde punteado (la leyenda ya lo explica como «Camino diseñado por el grupo»), se cargó «Grupo 03» con sus integrantes y se enlazó el repositorio en el pie |
 | 3 | ChatGPT | «necesito agregar o modificar algo»; se aceptó la propuesta de un simulador interactivo. | Los casos existentes eran predeterminados; no permitían elegir independientemente todas las condiciones. | «acordate que necesito todo el codigo entero para no equivocarme»; conservar diseño, diagramas y mensaje oculto. | Se generaron los archivos completos index.html, css/styles.css y js/main.js con simuladores R5 y R6, resultados y reinicio. |
 | 4 | ChatGPT | Probar la landing actualizada. | La sección nueva no aparecía porque index.html no se había guardado. | Revisar los archivos modificados y guardar el HTML. | La sección apareció y Cristel confirmó haber revisado el funcionamiento. |
