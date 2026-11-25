@@ -114,7 +114,6 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 | Para qué se usó | Revisar lo ya construido contra la consigna y la rúbrica; probar la landing en un navegador (desktop) midiendo desbordes en cuatro anchos, desplegables con clic y teclado, botones de casos y enlaces internos; detectar errores; y aplicar correcciones puntuales en `README.md` y `index.html` (datos del equipo, enlace del repositorio y un nodo del diagrama 2) |
 | Cambios solicitados | ver registro de iteración (fila 2) |
 
-> Si el grupo usa otras herramientas (Cursor, Codex, etc.), agreguen una sección por cada una. Si una aplicación no informa el modelo, escriban **“modelo no informado”**; no lo inventen.
 
 ### Herramienta 3 · ChatGPT
 
@@ -135,9 +134,9 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 
 ---
 
-## Publicación (completar antes de entregar)
-- [ ] **Repositorio del grupo:** \<https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> _(probar desde una ventana sin sesión que sea público)_
-- [ ] **Landing publicada:** `https://…` _(agregar enlace; por ejemplo GitHub Pages, Netlify o Vercel)_
+## Publicación 
+- [ ] **Repositorio del grupo:** \<https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> 
+- [ ] **Landing publicada:** `https://tp3ifts29frontendgrupo3.vercel.app/` 
 - [ ] Ambos enlaces probados **desde una ventana sin sesión**
 - [ ] Los dos enlaces quedan identificados en este README
 
