@@ -135,8 +135,8 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 ---
 
 ## Publicación 
-- [ ] **Repositorio del grupo:** \<https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> 
-- [ ] **Landing publicada:** `https://tp3ifts29frontendgrupo3.vercel.app/` 
+- [ ] **Repositorio del grupo:** <https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> 
+- [ ] **Landing publicada:** <https://tp3ifts29frontendgrupo3.vercel.app> 
 - [ ] Ambos enlaces probados **desde una ventana sin sesión**
 - [ ] Los dos enlaces quedan identificados en este README
 
