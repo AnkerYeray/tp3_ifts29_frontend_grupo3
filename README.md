@@ -144,7 +144,7 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 
 ## Checklist contra la rúbrica
 
-_Tildado = ya verificado (prueba en navegador de escritorio y revisión del contenido). Lo que sigue sin tildar lo tiene que comprobar el grupo._
+_Tildado = ya verificado (prueba en navegador de escritorio y revisión del contenido). 
 
 **01 · Participación**
 - [x] Todos participan y pueden explicar las dos propuestas
