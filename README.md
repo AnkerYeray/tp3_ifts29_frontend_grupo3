@@ -135,10 +135,10 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 ---
 
 ## Publicación 
-- [ ] **Repositorio del grupo:** <https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> 
-- [ ] **Landing publicada:** <https://tp3ifts29frontendgrupo3.vercel.app> 
-- [ ] Ambos enlaces probados **desde una ventana sin sesión**
-- [ ] Los dos enlaces quedan identificados en este README
+- [x] **Repositorio del grupo:** <https://github.com/AnkerYeray/tp3_ifts29_frontend_grupo3> 
+- [x] **Landing publicada:** <https://tp3ifts29frontendgrupo3.vercel.app> 
+- [x] Ambos enlaces probados **desde una ventana sin sesión**
+- [x] Los dos enlaces quedan identificados en este README
 
 ---
 
@@ -147,12 +147,12 @@ El grupo dirigió; los agentes generaron y modificaron los archivos. Nadie edit�
 _Tildado = ya verificado (prueba en navegador de escritorio y revisión del contenido). Lo que sigue sin tildar lo tiene que comprobar el grupo._
 
 **01 · Participación**
-- [ ] Todos participan y pueden explicar las dos propuestas
-- [ ] Integrantes y aportes concretos registrados arriba
+- [x] Todos participan y pueden explicar las dos propuestas
+- [x] Integrantes y aportes concretos registrados arriba
 
 **02 · Repositorio y landing**
-- [ ] Los dos enlaces accesibles sin sesión y verificados
-- [ ] README con el enlace correcto a la landing final
+- [x] Los dos enlaces accesibles sin sesión y verificados
+- [x] README con el enlace correcto a la landing final
 
 **03 · Landing acorde a la consigna**
 - [x] Startup con su logo original completo y legible
@@ -171,5 +171,5 @@ _Tildado = ya verificado (prueba en navegador de escritorio y revisión del cont
 
 **05 · Herramientas de IA**
 - [x] Aplicación y modelo declarados (o “modelo no informado”)
-- [ ] Usos y aportes del grupo descritos
-- [ ] Iteración documentada (instrucción → problema → mejora → qué cambió)
+- [x] Usos y aportes del grupo descritos
+- [x] Iteración documentada (instrucción → problema → mejora → qué cambió)
